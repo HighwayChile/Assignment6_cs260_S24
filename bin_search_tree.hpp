@@ -1,5 +1,6 @@
 #ifndef BIN_SEARCH_TREE_HPP
 #define BIN_SEARCH_TREE_HPP
+#pragma once
 
 struct BIN_node {
     int value;
@@ -7,11 +8,24 @@ struct BIN_node {
     BIN_node *right;
 };
 
+class BIN_tree {
+    // private:
+    //     BIN_node *head;
 
-// put function definitions here
-void test_function();
-void in_order_traverse();
-void pre_order_traverse();
-void post_order_traverse();
+    public:
+        BIN_node *head;
+        void create_tree();
+        int ask_for_data();
+        int search_element(); // menu item
+        void in_order_traverse(BIN_node *current); // menu item
+        void pre_order_traverse(BIN_node *current); // menu item
+        void post_order_traverse(BIN_node *current); // menu item
+        void add(int value_data); // menu item
+        void remove(int value_data); // menu item
+};
+
+void test_function(); // menu item
+void show_menu();
 
 #endif
+

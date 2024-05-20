@@ -3,18 +3,18 @@ Assignment_06 - Binary search tree
 
 # Checklist  
 Binary search tree with:  
-nodes to store values  
-add function that adds a value in designated location(node)  
+nodes to store values  - check   
+add function that adds a value in designated location(node) - check   
 a remove function that finds and removes a value and then picks replacement node ?(not sure about this one)    
-Start with in order traversal
-bonus - implement three common traversals (pre-order, post-order, in order)  
+Start with in order traversal - check
+bonus - implement three common traversals (pre-order, post-order, in order) - written, but not implemented    
 
 
 # Design  
 
 inorder() - in order traversal   
 
-is left/right is nullptr?   
+is left/right a nullptr?   
 
 If left is not null, go left by dereferencing "current" to "left."  
 
@@ -35,18 +35,33 @@ I need to instantiate binary node with left/right pointers as attributes
 
 Then I need to instantiate a new node at each of those pointers. Something like BIN_node *left = new BIN_node.  
 
-this is a very simple binary tree, with 3 total nodes, and with two leaves.
+this is a very simple binary tree, with 3 total nodes, and with two leaves.  
 
 to add more nodes, create new pointers for your previous nodes.  
 
-The "root" functionality is someone lost on me for now, but I know what it represents, and the purpose. It's more of the "how" that befuddles me atm. wait.. nvm... I get it. Sometimes I overcomplicate things when it comes to pointers.
+The "root" functionality is somewhat lost on me for now, but I know what it represents, and the purpose. It's more of the "how" that befuddles me atm. wait.. nvm... I get it. Sometimes I overcomplicate things when it comes to pointers. I tend to call the "root" the head.  
 
+
+set up add()/remove() -  
+This will be done with the typical loom-shuttle action of a pointer.  
+add() - add value where it would naturally belong, counting from 0 on up.  
+remove() - remove values, but what does replacement node mean?   
 
 
 - LIFE HACK!!! MOVE THE PRINT STATEMENT ABOVE AND BELOW THE "nullptr" CHECKS IN TRAVERSAL! Moving the statement up creates pre-order traversal, mocing it down creates post order traversal. Thank you Joseph Jess and recursion!  
 
 
+Set up tests -  
 
+my functions - inorder(), add(), remove()  
+
+inorder() does a traversal, could prove this is working by printing each value (or even address) to terminal.  
+
+add() can be tested the same way I tested assignment 5. Pass in a known set of values and test with a test module/function  
+
+remove() same test as "add" but in reverse.  
+
+plan - test add() first, then test inorder(), then add() one then test preorder()/postorder()  
 
 
 
