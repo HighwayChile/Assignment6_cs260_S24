@@ -7,7 +7,7 @@ nodes to store values  - check
 add function that adds a value in designated location(node) - check   
 a remove function that finds and removes a value and then picks replacement node ?(not sure about this one)    
 Start with in order traversal - check
-bonus - implement three common traversals (pre-order, post-order, in order) - written, but not implemented    
+bonus - implement three common traversals (pre-order, post-order, in order) - check (I think)   
 
 
 # Design  

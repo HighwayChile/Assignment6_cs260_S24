@@ -9,19 +9,18 @@ using namespace std;
 int main() {
     // introduction
     cout << "Welcome to Binary Search Tree! \n" << endl;
+    // decided to move list init. out here, because it is better, after all. It doesn't run with each cycle.
     BIN_tree my_tree;
     my_tree.create_tree();
 
     while (true) {
         int menu1;
         int menu_start = 1;
-        int menu_end = 8;
+        int menu_end = 9;
 
         show_menu();
-        // cout << "Temporary MENU BIN_search_tree" << endl;
-        // cout << "Enter num 1-7 to do stuff" << endl;
 
-        // check if user enters value within range 1-7
+        // check if user enters value within range 1-8
         if (cin >> menu1 && menu1 >= menu_start && menu1 <= menu_end) {
             switch (menu1) {
             case 1:
@@ -41,11 +40,12 @@ int main() {
             case 3:
             // remove node
                 cout << "You have chosen case 3 (remove node)" << endl;
-                test_function();
+                cout << "REMOVE DOESN'T WORK!" << endl;
+                my_tree.remove(my_tree.ask_for_data());
                 cout << "\n" << endl;
                 break;
             case 4:
-            // traversals (should I make this a sub-list?)
+            // traversals (should I make this a sub-list?)(decided no)
                 cout << "You have chosen case 4 (traverse in order)" << endl;
                 my_tree.in_order_traverse(my_tree.head);
                 cout << "\n" << endl;
@@ -66,6 +66,16 @@ int main() {
                 cout << "\n" << endl;
                 break;
             case 8:
+                // populate list 
+                my_tree.add(01);
+                my_tree.add(02);
+                my_tree.add(03);
+                my_tree.add(04);
+                my_tree.add(05);
+                my_tree.add(06);
+                my_tree.add(07);
+                break;
+            case 9:
                 // Quit
                 cout << "Quitting..." << endl;
                 system("pause");
